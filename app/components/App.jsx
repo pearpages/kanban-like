@@ -50,13 +50,13 @@ export default class App extends React.Component {
         this.setState({ notes });
     };
 
-    // deleteNode = (id,e) => {
-    //     e.stopPropagation();
+    deleteNote = (id,e) => {
+        e.stopPropagation();
 
-    //     this.setState({
-    //         notes: this.state.notes.filter(note => note.id !== id)
-    //     })
-    // }
+        this.setState({
+            notes: this.state.notes.filter(note => note.id !== id)
+        })
+    }
 
     render() {
         const notes = this.state.notes;
@@ -66,6 +66,7 @@ export default class App extends React.Component {
                 <Notes
                     notes={notes}
                     onEdit={this.editNote}
+                    onDelete={this.deleteNote}
                 />
             </div>
         );
