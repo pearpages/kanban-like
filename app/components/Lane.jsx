@@ -27,7 +27,7 @@ export default class Lane extends React.Component {
                     deleteLane={this.deleteLane}
                 />
                 <Lane.Notes
-                    activateNoteEdit={this.activateLaneEdit}
+                    activateNoteEdit={this.activateNoteEdit}
                     deleteNote={this.deleteNote}
                     editNote={this.editNote}
                     lane={lane}
