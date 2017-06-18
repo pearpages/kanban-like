@@ -5,7 +5,7 @@ import LaneActions from '../actions/LaneActions';
 
 export default function Notes({ notes, onValueClick, onEdit, onDelete }) {
     return (
-        <ul className="notes">{notes.map(note =>
+        <ol className="notes">{notes.map(note =>
 
             <Note
                 className="note"
@@ -20,6 +20,6 @@ export default function Notes({ notes, onValueClick, onEdit, onDelete }) {
                     onEdit={onEdit.bind(null, note.id)}
                     onDelete={onDelete.bind(null, note.id)} />
             </Note>
-        )}</ul>
+        )}</ol>
     );
 }

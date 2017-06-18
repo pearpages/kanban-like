@@ -12,7 +12,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.addLane}>+</button>
+                <button className="add-note" onClick={this.addLane}>+</button>
                 <AltContainer
                     stores={[LaneStore]}
                     inject={{
